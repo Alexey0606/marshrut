@@ -1,6 +1,7 @@
 import {
   Shield, Users, Briefcase, FileText, Star, Plane,
   Compass, Globe, Headphones, Search, Layout, Heart, Eye,
+  HandshakeIcon,
 } from 'lucide-react'
 
 const MAP = {

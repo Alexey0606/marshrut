@@ -1,6 +1,7 @@
 import AnimSection from '../components/AnimSection'
 import SectionHead from '../components/SectionHead'
 import GlowBtn from '../components/GlowBtn'
+import Icon from '../components/Icon'
 import { useApp } from '../context'
 import { t } from '../i18n'
 
@@ -22,15 +23,17 @@ export default function About() {
       <section style={{ padding: '80px 24px', background: 'var(--bg2)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 28 }}>
           {[
-            { label: tr.mission, text: tr.missionText, icon: '🧭' },
-            { label: tr.vision,  text: tr.visionText,  icon: '🌟' },
+            { label: tr.mission, text: tr.missionText, icon: 'compass' },
+            { label: tr.vision,  text: tr.visionText,  icon: 'star' },
           ].map((item, i) => (
             <AnimSection key={i} delay={i * 0.15}>
               <div style={{
                 background: 'var(--surface)', borderRadius: 20, padding: '36px 32px',
                 border: '1px solid var(--border)', boxShadow: 'var(--card-shadow)',
               }}>
-                <div style={{ fontSize: '2.5rem', marginBottom: 16 }}>{item.icon}</div>
+                <div style={{ width: 56, height: 56, borderRadius: 16, background: 'rgba(var(--gold-rgb),.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16 }}>
+                  <Icon name={item.icon} size={28} color='var(--gold)' />
+                </div>
                 <div style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12 }}>{item.label}</div>
                 <p className="font-display" style={{ fontSize: '1.15rem', color: 'var(--text)', lineHeight: 1.7, fontStyle: 'italic' }}>{item.text}</p>
               </div>
@@ -76,7 +79,9 @@ export default function About() {
             {tr.vals.map((v, i) => (
               <AnimSection key={i} delay={i * 0.1}>
                 <div className="glass-gold" style={{ borderRadius: 16, padding: '28px 24px', border: '1px solid var(--border)', textAlign: 'center' }}>
-                  <div style={{ fontSize: '2.2rem', marginBottom: 14 }}>{v.icon}</div>
+                  <div style={{ width: 52, height: 52, borderRadius: 14, background: 'rgba(var(--gold-rgb),.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 14, margin: '0 auto 14px' }}>
+                    <Icon name={v.icon} size={26} color='var(--gold)' />
+                  </div>
                   <h3 style={{ fontWeight: 700, color: 'var(--text)', marginBottom: 8, fontSize: '1rem' }}>{v.name}</h3>
                   <p style={{ color: 'var(--muted)', fontSize: '0.875rem', lineHeight: 1.65 }}>{v.desc}</p>
                 </div>

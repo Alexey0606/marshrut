@@ -18,9 +18,9 @@ export const t = {
       label: 'Кому мы помогаем',
       h2a: 'Узнаёте', h2b: 'себя?',
       cards: [
-        { title: 'Боитесь отказа', tag: 'Самый частый запрос', desc: 'Уже был отказ или не знаете с чего начать. Мы делаем аудит риска и строим маршрут, который работает.', icon: '🛡️' },
-        { title: 'Семья с детьми', tag: 'Комплексный подход', desc: 'Переезд с детьми требует системного подхода: визы, школы, жильё. Мы сопровождаем семью на каждом шаге.', icon: '👨‍👩‍👧' },
-        { title: 'Предприниматель', tag: 'Бизнес-релокация', desc: 'Переносите бизнес или ищете юрисдикцию. Дубай, ЕС — помогаем выбрать и организовать всё правильно.', icon: '💼' },
+        { title: 'Боитесь отказа', tag: 'Самый частый запрос', desc: 'Уже был отказ или не знаете с чего начать. Мы делаем аудит риска и строим маршрут, который работает.', icon: 'shield' },
+        { title: 'Семья с детьми', tag: 'Комплексный подход', desc: 'Переезд с детьми требует системного подхода: визы, школы, жильё. Мы сопровождаем семью на каждом шаге.', icon: 'users' },
+        { title: 'Предприниматель', tag: 'Бизнес-релокация', desc: 'Переносите бизнес или ищете юрисдикцию. Дубай, ЕС — помогаем выбрать и организовать всё правильно.', icon: 'briefcase' },
       ],
     },
     services: {
@@ -29,7 +29,7 @@ export const t = {
       sub: 'Продуктовая лестница: начните с диагностики, а мы подберём решение под вашу ситуацию.',
       cats: [
         {
-          name: 'Визовые услуги', icon: '📋',
+          name: 'Визовые услуги', icon: 'file-text',
           items: [
             { name: 'Бесплатная диагностика', price: '0 ₽', desc: 'Анализ ситуации, оценка шансов' },
             { name: 'Маршрутный лист для анкеты', price: '500–777 ₽', desc: 'Чёткая инструкция по заполнению' },
@@ -41,7 +41,7 @@ export const t = {
           ],
         },
         {
-          name: 'Флагманские пакеты', icon: '⭐',
+          name: 'Флагманские пакеты', icon: 'star',
           featured: true,
           items: [
             { name: 'Шенгенская виза под ключ', price: '14 900 ₽ / 25 000 ₽', desc: 'Регионы / Москва. Всё включено' },
@@ -50,7 +50,7 @@ export const t = {
           ],
         },
         {
-          name: 'Релокация', icon: '✈️',
+          name: 'Релокация', icon: 'plane',
           items: [
             { name: 'Переезд под ключ', price: '250 000–600 000 ₽', desc: 'Индивидуальный план переезда' },
             { name: 'Семейная релокация', price: '200 000–450 000 ₽', desc: 'Дети, школы, жильё, адаптация' },
@@ -65,10 +65,10 @@ export const t = {
       label: 'Почему Domira',
       h2a: 'Не просто виза —', h2b: 'полный маршрут',
       items: [
-        { icon: '🧭', title: 'Системный подход', desc: 'Не разовая услуга, а маршрут от первой консультации до адаптации на новом месте.' },
-        { icon: '🤝', title: 'Честность в прогнозах', desc: 'Мы не обещаем гарантированное решение консульства — этого не гарантирует никто честно.' },
-        { icon: '🌍', title: 'Личный опыт', desc: 'Алексей Березин посетил 25 стран за 6 лет и лично оформлял визы и вёл переговоры с консульствами.' },
-        { icon: '📡', title: 'Поддержка на каждом шаге', desc: 'Ты никогда не останешься один на один с непонятным следующим шагом.' },
+        { icon: 'compass', title: 'Системный подход', desc: 'Не разовая услуга, а маршрут от первой консультации до адаптации на новом месте.' },
+        { icon: 'handshake', title: 'Честность в прогнозах', desc: 'Мы не обещаем гарантированное решение консульства — этого не гарантирует никто честно.' },
+        { icon: 'globe', title: 'Личный опыт', desc: 'Алексей Березин посетил 25 стран за 6 лет и лично оформлял визы и вёл переговоры с консульствами.' },
+        { icon: 'headphones', title: 'Поддержка на каждом шаге', desc: 'Ты никогда не останешься один на один с непонятным следующим шагом.' },
       ],
     },
     process: {
@@ -138,7 +138,7 @@ export const t = {
       l1: ['Шенгенская виза', 'Мультишенген', 'Семейная релокация', 'Бизнес-релокация', 'Диагностика'],
       col2: 'Компания',
       l2: ['О нас', 'Как мы работаем', 'Отзывы', 'FAQ'],
-      copy: '© 2026 Domira / GL Relocation. Информационно-организационные услуги.',
+      copy: '© 2026 Domira. Информационно-организационные услуги.',
       disclaimer: 'Не является юридической консультацией. Решения принимают соответствующие государственные органы.',
     },
     about: {
@@ -154,10 +154,10 @@ export const t = {
       alexDesc: 'Посетил 25 стран за 6 лет. Лично оформлял визы и вёл переговоры с консульствами. Магистр мировой экономики (Synergy University, Дубай).',
       values: 'Наши ценности',
       vals: [
-        { icon: '🔍', name: 'Честность в прогнозах', desc: 'Говорим правду о шансах, даже если она неудобна.' },
-        { icon: '📐', name: 'Системность', desc: 'Не набор разовых услуг, а выстроенный маршрут.' },
-        { icon: '❤️', name: 'Забота о человеке', desc: 'Важен человек, а не только его документ.' },
-        { icon: '🪟', name: 'Прозрачность', desc: 'Вы всегда знаете, что происходит и что будет дальше.' },
+        { icon: 'search', name: 'Честность в прогнозах', desc: 'Говорим правду о шансах, даже если она неудобна.' },
+        { icon: 'layout', name: 'Системность', desc: 'Не набор разовых услуг, а выстроенный маршрут.' },
+        { icon: 'heart', name: 'Забота о человеке', desc: 'Важен человек, а не только его документ.' },
+        { icon: 'eye', name: 'Прозрачность', desc: 'Вы всегда знаете, что происходит и что будет дальше.' },
       ],
     },
     contact: {
@@ -189,9 +189,9 @@ export const t = {
       label: 'Who We Help',
       h2a: 'Do you', h2b: 'recognise yourself?',
       cards: [
-        { title: 'Afraid of Rejection', tag: 'Most common request', desc: "Had a refusal or don't know where to start. We audit the risk and build a route that works.", icon: '🛡️' },
-        { title: 'Family with Children', tag: 'Comprehensive approach', desc: 'Relocating with kids requires a system: visas, schools, housing. We support the whole family.', icon: '👨‍👩‍👧' },
-        { title: 'Entrepreneur', tag: 'Business relocation', desc: 'Moving a business or choosing a jurisdiction. Dubai, EU — we help you decide and organise everything.', icon: '💼' },
+        { title: 'Afraid of Rejection', tag: 'Most common request', desc: "Had a refusal or don't know where to start. We audit the risk and build a route that works.", icon: 'shield' },
+        { title: 'Family with Children', tag: 'Comprehensive approach', desc: 'Relocating with kids requires a system: visas, schools, housing. We support the whole family.', icon: 'users' },
+        { title: 'Entrepreneur', tag: 'Business relocation', desc: 'Moving a business or choosing a jurisdiction. Dubai, EU — we help you decide and organise everything.', icon: 'briefcase' },
       ],
     },
     services: {
@@ -200,7 +200,7 @@ export const t = {
       sub: "A product ladder: start with a free consultation and we'll find the right solution for your situation.",
       cats: [
         {
-          name: 'Visa Services', icon: '📋',
+          name: 'Visa Services', icon: 'file-text',
           items: [
             { name: 'Free Consultation', price: 'Free', desc: 'Situation analysis, chance assessment' },
             { name: 'Application Route Sheet', price: '500–777 ₽', desc: 'Clear step-by-step form guide' },
@@ -212,7 +212,7 @@ export const t = {
           ],
         },
         {
-          name: 'Flagship Packages', icon: '⭐',
+          name: 'Flagship Packages', icon: 'star',
           featured: true,
           items: [
             { name: 'Schengen Visa Turnkey', price: '14 900 ₽ / 25 000 ₽', desc: 'Regions / Moscow. All inclusive' },
@@ -221,7 +221,7 @@ export const t = {
           ],
         },
         {
-          name: 'Relocation', icon: '✈️',
+          name: 'Relocation', icon: 'plane',
           items: [
             { name: 'Full Relocation', price: '250 000–600 000 ₽', desc: 'Personal relocation plan' },
             { name: 'Family Relocation', price: '200 000–450 000 ₽', desc: 'Children, schools, housing, adaptation' },
@@ -236,10 +236,10 @@ export const t = {
       label: 'Why Domira',
       h2a: 'Not just a visa —', h2b: 'a full route',
       items: [
-        { icon: '🧭', title: 'Systematic Approach', desc: 'Not a one-off service, but a route from the first consultation to adaptation in a new place.' },
-        { icon: '🤝', title: 'Honest Forecasts', desc: "We don't promise a guaranteed consulate decision — no one honest does." },
-        { icon: '🌍', title: 'Personal Experience', desc: 'Alexey Berezin visited 25 countries in 6 years and personally handled visas and negotiations.' },
-        { icon: '📡', title: 'Support at Every Step', desc: "You'll never be left alone facing an unclear next step." },
+        { icon: 'compass', title: 'Systematic Approach', desc: 'Not a one-off service, but a route from the first consultation to adaptation in a new place.' },
+        { icon: 'handshake', title: 'Honest Forecasts', desc: "We don't promise a guaranteed consulate decision — no one honest does." },
+        { icon: 'globe', title: 'Personal Experience', desc: 'Alexey Berezin visited 25 countries in 6 years and personally handled visas and negotiations.' },
+        { icon: 'headphones', title: 'Support at Every Step', desc: "You'll never be left alone facing an unclear next step." },
       ],
     },
     process: {
@@ -309,7 +309,7 @@ export const t = {
       l1: ['Schengen Visa', 'Multi-Schengen', 'Family Relocation', 'Business Relocation', 'Free Consultation'],
       col2: 'Company',
       l2: ['About Us', 'How We Work', 'Reviews', 'FAQ'],
-      copy: '© 2026 Domira / GL Relocation. Information and organisational services.',
+      copy: '© 2026 Domira. Information and organisational services.',
       disclaimer: 'Not legal advice. Decisions are made by the relevant government authorities.',
     },
     about: {
@@ -325,10 +325,10 @@ export const t = {
       alexDesc: 'Visited 25 countries over 6 years. Personally handled visas and negotiations with consulates. MSc in World Economics (Synergy University, Dubai).',
       values: 'Our Values',
       vals: [
-        { icon: '🔍', name: 'Honest Forecasts', desc: "We tell the truth about chances, even when it's uncomfortable." },
-        { icon: '📐', name: 'Systematic Approach', desc: 'Not a set of one-off services, but a structured route.' },
-        { icon: '❤️', name: 'Care for People', desc: 'The person matters, not just their documents.' },
-        { icon: '🪟', name: 'Transparency', desc: "You always know what's happening and what comes next." },
+        { icon: 'search', name: 'Honest Forecasts', desc: "We tell the truth about chances, even when it's uncomfortable." },
+        { icon: 'layout', name: 'Systematic Approach', desc: 'Not a set of one-off services, but a structured route.' },
+        { icon: 'heart', name: 'Care for People', desc: 'The person matters, not just their documents.' },
+        { icon: 'eye', name: 'Transparency', desc: "You always know what's happening and what comes next." },
       ],
     },
     contact: {

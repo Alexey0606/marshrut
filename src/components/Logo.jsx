@@ -5,6 +5,7 @@ export default function Logo({ size = 'md', forceLight = false }) {
   const isDark = !forceLight && theme === 'dark'
   const gold = isDark ? '#C9A84C' : '#B8922A'
   const gold2 = isDark ? '#F0D98A' : '#D4A93C'
+  const textColor = isDark ? '#F0EDE6' : '#1A1208'
   const name = lang === 'ru' ? 'ДоМира' : 'DoMira'
   const h = size === 'sm' ? 32 : size === 'lg' ? 52 : 40
 
@@ -31,15 +32,29 @@ export default function Logo({ size = 'md', forceLight = false }) {
         </clipPath>
       </defs>
 
+      {/* Globe background glow */}
       <circle cx="25" cy="25" r="22" fill={`url(#${gid}-r)`} />
+
+      {/* Globe outline */}
       <circle cx="25" cy="25" r="18" stroke={`url(#${gid}-g)`} strokeWidth="1.5" fill="none" filter={`url(#${gid}-glow)`} />
+
+      {/* Equator */}
       <ellipse cx="25" cy="25" rx="18" ry="6" stroke={gold} strokeWidth="0.8" fill="none" opacity="0.7" clipPath={`url(#${gid}-clip)`} />
+
+      {/* Meridian vertical */}
       <ellipse cx="25" cy="25" rx="8" ry="18" stroke={gold} strokeWidth="0.8" fill="none" opacity="0.6" clipPath={`url(#${gid}-clip)`} />
+
+      {/* Meridian 2 */}
       <ellipse cx="25" cy="25" rx="14" ry="18" stroke={gold} strokeWidth="0.6" fill="none" opacity="0.35" clipPath={`url(#${gid}-clip)`} />
+
+      {/* Latitude lines */}
       <ellipse cx="25" cy="19" rx="16" ry="4.5" stroke={gold} strokeWidth="0.6" fill="none" opacity="0.4" clipPath={`url(#${gid}-clip)`} />
       <ellipse cx="25" cy="31" rx="16" ry="4.5" stroke={gold} strokeWidth="0.6" fill="none" opacity="0.4" clipPath={`url(#${gid}-clip)`} />
+
+      {/* North pole dot */}
       <circle cx="25" cy="7" r="1.5" fill={gold2} opacity="0.9" filter={`url(#${gid}-glow)`} />
 
+      {/* Text: DoMira */}
       <text
         x="52" y="30"
         fontFamily="'Playfair Display', Georgia, serif"
@@ -49,6 +64,7 @@ export default function Logo({ size = 'md', forceLight = false }) {
         filter={`url(#${gid}-glow)`}
       >{name}</text>
 
+      {/* Tagline */}
       <text
         x="53" y="41"
         fontFamily="'Inter', sans-serif"
@@ -56,6 +72,7 @@ export default function Logo({ size = 'md', forceLight = false }) {
         letterSpacing="1.5"
         fill={gold}
         opacity="0.75"
+        textTransform="uppercase"
       >{lang === 'ru' ? 'ВАШЕ ГЛОБАЛЬНОЕ РЕШЕНИЕ' : 'YOUR GLOBAL SOLUTION'}</text>
     </svg>
   )

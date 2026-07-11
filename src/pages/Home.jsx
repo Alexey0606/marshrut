@@ -3,6 +3,7 @@ import { ChevronDown, ChevronRight, ChevronLeft, Check, Star, ArrowUpRight } fro
 import AnimSection from '../components/AnimSection'
 import SectionHead from '../components/SectionHead'
 import GlowBtn from '../components/GlowBtn'
+import Icon from '../components/Icon'
 import { useApp } from '../context'
 import { t } from '../i18n'
 
@@ -143,7 +144,9 @@ function AudienceCards({ tr }) {
               onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-6px)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'none'}
               >
-                <div style={{ fontSize: '2.4rem', marginBottom: 16 }}>{c.icon}</div>
+                <div style={{ width: 52, height: 52, borderRadius: 14, background: `rgba(${colors[i].slice(1).match(/../g).map(x=>parseInt(x,16)).join(',')},0.15)`, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16 }}>
+                  <Icon name={c.icon} size={26} color={colors[i]} />
+                </div>
                 <div style={{ display: 'inline-block', background: `rgba(${colors[i].slice(1).match(/../g).map(x=>parseInt(x,16)).join(',')},0.15)`, borderRadius: 999, padding: '4px 12px', fontSize: '0.72rem', fontWeight: 700, color: colors[i], marginBottom: 14, letterSpacing: '0.06em' }}>{c.tag}</div>
                 <h3 className="font-display" style={{ fontSize: '1.35rem', fontWeight: 700, marginBottom: 12, color: 'var(--text)' }}>{c.title}</h3>
                 <p style={{ color: 'var(--muted)', lineHeight: 1.7, fontSize: '0.92rem' }}>{c.desc}</p>
@@ -172,7 +175,9 @@ function Services({ tr }) {
                 boxShadow: cat.featured ? '0 8px 40px rgba(var(--gold-rgb),.12)' : 'var(--card-shadow)',
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
-                  <span style={{ fontSize: '1.8rem' }}>{cat.icon}</span>
+                  <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 40, height: 40, borderRadius: 10, background: cat.featured ? 'rgba(var(--gold-rgb),.18)' : 'var(--bg2)' }}>
+                    <Icon name={cat.icon} size={22} color={cat.featured ? 'var(--gold)' : 'var(--text2)'} />
+                  </span>
                   <h3 className="font-display" style={{ fontSize: '1.2rem', fontWeight: 700, color: cat.featured ? 'var(--gold)' : 'var(--text)' }}>{cat.name}</h3>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -217,7 +222,9 @@ function Why({ tr }) {
               <div className="glass-gold" style={{ borderRadius: 16, padding: '28px 24px', border: '1px solid var(--border)', transition: 'transform .3s' }}
               onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-4px)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'none'}>
-                <div style={{ fontSize: '2rem', marginBottom: 14 }}>{item.icon}</div>
+                <div style={{ width: 48, height: 48, borderRadius: 12, background: 'rgba(var(--gold-rgb),.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 14 }}>
+                  <Icon name={item.icon} size={24} color='var(--gold)' />
+                </div>
                 <h3 style={{ fontWeight: 700, color: 'var(--text)', marginBottom: 8, fontSize: '1rem' }}>{item.title}</h3>
                 <p style={{ color: 'var(--muted)', fontSize: '0.875rem', lineHeight: 1.65 }}>{item.desc}</p>
               </div>
