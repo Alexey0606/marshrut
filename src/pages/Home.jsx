@@ -386,7 +386,7 @@ function Testimonials({ tr }) {
               <div style={{ display: 'flex', gap: 4, marginBottom: 20 }}>
                 {[...Array(items[idx].stars)].map((_,i) => <Star key={i} size={18} fill="var(--gold)" color="var(--gold)"/>)}
               </div>
-              <p style={{ fontSize: '1.05rem', color: 'var(--text)', lineHeight: 1.75, marginBottom: 24, fontStyle: 'italic' }}>"{items[idx].text}"</p>
+              <p style={{ fontSize: '1.05rem', color: 'var(--text)', lineHeight: 1.75, marginBottom: 24, fontStyle: 'italic' }}>"{ items[idx].text}"</p>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
                 <div>
                   <div style={{ fontWeight: 700, color: 'var(--text)' }}>{items[idx].name}</div>
